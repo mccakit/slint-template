@@ -1,6 +1,6 @@
 #include "hello.h"
 
-int main(int argc, char **argv)
+int main()
 {
     auto app = MyApp::create();
     app->run();

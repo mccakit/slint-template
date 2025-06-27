@@ -21,4 +21,3 @@ set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
 set(Rust_CARGO_TARGET ${triple})
-set(ENV{RUSTFLAGS} "-C link-arg=-fuse-ld=lld")

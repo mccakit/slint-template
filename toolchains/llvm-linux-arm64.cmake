@@ -1,7 +1,6 @@
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR aarch64)
-set(CMAKE_SYSROOT "C:/dev/sysroots/deb-arm64")
-set(triple aarch64-linux-gnu)
+set(triple aarch64-unknown-linux-gnu)
 
 set(CMAKE_C_COMPILER C:/dev/toolchains/llvm-project/build/bin/clang.exe)
 set(CMAKE_C_COMPILER_TARGET ${triple})
@@ -20,3 +19,6 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+set(Rust_CARGO_TARGET ${triple})
+set(ENV{RUSTFLAGS} "-C link-arg=-fuse-ld=lld")

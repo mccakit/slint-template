@@ -1,6 +1,5 @@
 set(CMAKE_SYSTEM_NAME Windows)
 set(CMAKE_SYSTEM_PROCESSOR arm64)
-set(CMAKE_SYSROOT "C:/Program Files (x86)/Microsoft SDKs/Windows Kits/10")
 set(triple arm64-windows-msvc)
 
 set(CMAKE_C_COMPILER C:/dev/toolchains/llvm-project/build/bin/clang.exe)
@@ -16,8 +15,10 @@ set(CMAKE_ASM_COMPILER C:/dev/toolchains/llvm-project/build/bin/clang.exe)
 
 set(CMAKE_SYSROOT "C:/dev/sysroots/WinSDK/10")
 set(VULKAN_SDK "C:/VulkanSDK/1.4.313.1")
-set(Qt6_DIR "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6")
+set(Qt6_DIR "C:/Qt/6.9.1/msvc2022_arm64/lib/cmake/Qt6")
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+set(Rust_CARGO_TARGET ${triple})

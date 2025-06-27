@@ -10,7 +10,6 @@ project(
 set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(BUILD_SHARED_LIBS OFF)
-
 include(CTest)
 include(FetchContent)
 if(EMSCRIPTEN)

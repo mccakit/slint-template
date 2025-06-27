@@ -15,7 +15,6 @@ set(CMAKE_ASM_COMPILER C:/dev/toolchains/llvm-project/build/bin/clang.exe)
 
 set(CMAKE_SYSROOT "C:/dev/sysroots/WinSDK/10")
 set(VULKAN_SDK "C:/VulkanSDK/1.4.313.1")
-set(Qt6_DIR "C:/Qt/6.9.1/msvc2022_arm64/lib/cmake/Qt6")
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY BOTH)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)
