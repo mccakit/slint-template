@@ -1,0 +1,3 @@
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+linker = "C:/dev/toolchains/llvm-project/build/bin/clang.exe"
