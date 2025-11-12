@@ -1,3 +1,5 @@
 [submodule "extern/slint"]
-	path = extern/slint
-	url = git@github.com:slint-ui/slint.git
+    path = extern/slint
+    url = git@github.com:slint-ui/slint.git
+    branch = master
+    depth = 1
