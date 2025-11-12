@@ -1,6 +1,21 @@
 [target.x86_64-unknown-linux-gnu]
-rustflags = ["-C", "link-arg=-fuse-ld=lld"]
-linker = "C:/dev/toolchains/llvm-project/build/bin/clang.exe"
-[target.aarch64-unknown-linux-gnu]
-rustflags = ["-C", "link-arg=-fuse-ld=lld"]
-linker = "C:/dev/toolchains/llvm-project/build/bin/clang.exe"
+rustflags = [
+    "-C", "linker=clang",
+    "-C", "link-arg=-fuse-ld=lld",
+    "-C", "link-arg=-rtlib=compiler-rt",
+    "-C", "link-arg=-nostdlib++",
+    "-C", "link-arg=/home/mccakit/dev/libcxx/native/lib/libc++.a",
+    "-C", "link-arg=/home/mccakit/dev/libcxx/native/lib/libc++abi.a",
+    "-C", "link-arg=/home/mccakit/dev/libcxx/native/lib/libunwind.a"
+]
+[env]
+CC="/home/mccakit/dev/llvm/bin/clang"
+CXX="/home/mccakit/dev/llvm/bin/clang++"
+AR="/home/mccakit/dev/llvm/bin/llvm-ar"
+RANLIB="/home/mccakit/dev/llvm/bin/llvm-ranlib"
+STRIP="/home/mccakit/dev/llvm/bin/llvm-strip"
+WINDRES="/home/mccakit/dev/llvm/bin/llvm-windres"
+DLLTOOL="/home/mccakit/dev/llvm/bin/llvm-dlltool"
+CFLAGS_x86_64_unknown_linux_gnu="-std=gnu23 -O3 -DNDEBUG -fPIC"
+CXXFLAGS_x86_64_unknown_linux_gnu="-std=c++26 -O3 -DNDEBUG -fPIC -nostdinc++ -nostdlib++ -isystem /home/mccakit/dev/libcxx/native/include/c++/v1"
+LDFLAGS_x86_64_unknown_linux_gnu="-fuse-ld=lld -nostdlib++ -rtlib=compiler-rt /home/mccakit/dev/libcxx/native/lib/libunwind.a /home/mccakit/dev/libcxx/native/lib/libc++abi.a /home/mccakit/dev/libcxx/native/lib/libc++.a"
